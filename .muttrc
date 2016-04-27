@@ -1,0 +1,13 @@
+set imap_user = 'sizaxyd@gmail.com'
+set imap_pass = 'dzcmunzmdobluwqo'
+
+set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com
+set spoolfile = imaps://imap.gmail.com/INBOX
+set folder = imaps://imap.gmail.com/
+set record = ""
+set postponed = "imaps://imap.gmail.com/[Gmail]/Drafts"
+set editor=vim
+set fast_reply=yes
+set include=yes
+bind index "^" imap-fetch-mail
+set message_cachedir=~/.cache/mutt/messages
