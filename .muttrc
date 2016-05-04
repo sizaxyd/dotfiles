@@ -1,5 +1,7 @@
+source "gpg2 -dq $HOME/.my-pwds.gpg |"
 set imap_user = 'sizaxyd@gmail.com'
-set imap_pass = 'dzcmunzmdobluwqo'
+# Every time the password is needed, use $my_pw_personal variable
+set imap_pass=$my_pw_personal
 
 set smtp_url=smtps://$imap_user:$imap_pass@smtp.gmail.com
 set spoolfile = imaps://imap.gmail.com/INBOX
@@ -10,4 +12,9 @@ set editor=vim
 set fast_reply=yes
 set include=yes
 bind index "^" imap-fetch-mail
-set message_cachedir=~/.cache/mutt/messages
+set header_cache = ~/.cache/mutt
+set message_cachedir=~/.cache/mutt
+set sort=threads
+
+set mailcap_path 	= ~/.mutt/mailcap
+auto_view text/html
