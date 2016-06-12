@@ -162,3 +162,5 @@
 (load-theme 'zenburn t)
 
 (tool-bar-mode -1)
+
+(global-set-key (kbd "C-x G") 'magit-status)
