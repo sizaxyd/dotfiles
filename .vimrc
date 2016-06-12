@@ -103,3 +103,7 @@ endif
 
 set spelllang=en,ru
 " set spell
+
+syntax enable
+set background=dark
+colorscheme solarized

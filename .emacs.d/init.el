@@ -160,3 +160,5 @@
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
 (load-theme 'zenburn t)
+
+(tool-bar-mode -1)
