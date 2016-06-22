@@ -159,7 +159,9 @@
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
-(load-theme 'zenburn t)
+(if (display-graphic-p)
+    (load-theme 'zenburn t)
+  (load-theme 'solarized t))
 
 (tool-bar-mode -1)
 
