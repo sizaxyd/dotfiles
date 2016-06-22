@@ -115,7 +115,6 @@
 (setq
  ;; use gdb-many-windows by default
  gdb-many-windows t
-
  ;; Non-nil means display source file containing the main routine at startup
  gdb-show-main t
  )
@@ -159,8 +158,14 @@
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 
-(load-theme 'zenburn t)
+(if (display-graphic-p)
+    (load-theme 'zenburn t)
+  (load-theme 'solarized t))
 
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 (global-set-key (kbd "C-x G") 'magit-status)
+
+;; line numbering
+(add-hook 'prog-mode-hook 'linum-mode)
