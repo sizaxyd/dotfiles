@@ -162,10 +162,26 @@
     (load-theme 'zenburn t)
   (load-theme 'solarized t))
 
+;; visuals
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 
+;; Magit
 (global-set-key (kbd "C-x G") 'magit-status)
 
 ;; line numbering
 (add-hook 'prog-mode-hook 'linum-mode)
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote smtpmail-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
