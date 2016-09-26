@@ -15,10 +15,13 @@ set include=yes
 bind index "^" imap-fetch-mail
 set header_cache = ~/.cache/mutt
 set message_cachedir=~/.cache/mutt
-set sort=threads
 
 set mailcap_path 	= ~/.mutt/mailcap
 auto_view text/html
+
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
 
 #
 # #
