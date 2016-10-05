@@ -11,6 +11,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -114,5 +115,3 @@ set spelllang=en,ru
 " set spell
 
 syntax enable
-set background=dark
-colorscheme solarized
