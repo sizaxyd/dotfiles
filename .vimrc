@@ -115,3 +115,4 @@ set spelllang=en,ru
 " set spell
 
 syntax enable
+colorscheme solarized
