@@ -52,7 +52,7 @@ values."
      ;; version-control
      python
      django
-     ;; c-c++
+     c-c++
      latex
      )
    ;; List of additional packages that will be installed without being
