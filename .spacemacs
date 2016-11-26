@@ -59,9 +59,8 @@ values."
      syntax-checking
      version-control
      python
-     django
-     (c-c++ :variables
-            c-c++-enable-clang-support t)
+     ;; django
+     c-c++
      ;; latex
      )
    ;; List of additional packages that will be installed without being
@@ -323,7 +322,7 @@ you should place your code here."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help slime-company slime common-lisp-snippets git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl jinja2-mode ansible-doc ansible mmm-mode markdown-toc markdown-mode gh-md yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode nginx-mode hide-comnt web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data pony-mode company-auctex auctex-latexmk auctex yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc flycheck-pos-tip pos-tip flycheck disaster cython-mode company-c-headers company-anaconda cmake-mode clang-format anaconda-mode pythonic org-projectile org-present org-pomodoro alert log4e gntp org-download mwim htmlize helm-company helm-c-yasnippet gnuplot company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete smeargle orgit org magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
+    (pcache xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help slime-company slime common-lisp-snippets git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl jinja2-mode ansible-doc ansible mmm-mode markdown-toc markdown-mode gh-md yaml-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode nginx-mode hide-comnt web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data pony-mode company-auctex auctex-latexmk auctex yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc flycheck-pos-tip pos-tip flycheck disaster cython-mode company-c-headers company-anaconda cmake-mode clang-format anaconda-mode pythonic org-projectile org-present org-pomodoro alert log4e gntp org-download mwim htmlize helm-company helm-c-yasnippet gnuplot company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete smeargle orgit org magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-theme)))
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -360,3 +359,28 @@ you should place your code here."
 ;; store email in ~/gmail directory
 (setq nnml-directory "~/gmail")
 (setq message-directory "~/gmail")
+
+;; Python 
+(setq-default dotspacemacs-configuration-layers
+              '((python :variables
+                        python-enable-yapf-format-on-save t
+                        python-test-runner 'pytest)))
+
+;; Auto completion
+(setq-default dotspacemacs-configuration-layers
+              '((auto-completion :variables
+                                 auto-completion-return-key-behavior 'complete
+                                 auto-completion-enable-snippets-in-popup t
+                                 auto-completion-enable-sort-by-usage t
+                                 auto-completion-tab-key-behavior 'cycle
+                                 auto-completion-complete-with-key-sequence jk
+                                 auto-completion-complete-with-key-sequence-delay 0.1
+                                 auto-completion-private-snippets-directory nil)))
+
+;; c-c++ 
+(setq-default dotspacemacs-configuration-layers
+              '((c-c++ :variables
+                       c-c++-enable-clang-support t)))
+
+(setq-default dotspacemacs-configuration-layers
+              '((auto-completion :variables
