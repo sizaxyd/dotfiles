@@ -382,5 +382,3 @@ you should place your code here."
               '((c-c++ :variables
                        c-c++-enable-clang-support t)))
 
-(setq-default dotspacemacs-configuration-layers
-              '((auto-completion :variables
