@@ -360,7 +360,7 @@ you should place your code here."
 (setq nnml-directory "~/gmail")
 (setq message-directory "~/gmail")
 
-;; Python 
+;; Python
 (setq-default dotspacemacs-configuration-layers
               '((python :variables
                         python-enable-yapf-format-on-save t
@@ -377,7 +377,7 @@ you should place your code here."
                                  auto-completion-complete-with-key-sequence-delay 0.1
                                  auto-completion-private-snippets-directory nil)))
 
-;; c-c++ 
+;; c-c++
 (setq-default dotspacemacs-configuration-layers
               '((c-c++ :variables
                        c-c++-enable-clang-support t)))
