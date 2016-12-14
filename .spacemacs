@@ -40,7 +40,7 @@ values."
      shell
      ;; common-lisp
      ;; yaml
-     ;; ansible
+     ansible
      ;; php
      ;; nginx
      ;; html
@@ -64,7 +64,8 @@ values."
      auto-completion
      semantic
      (c-c++ :variables
-            c-c++-enable-clang-support t)
+            c-c++-enable-clang-support t
+            c-c++-default-mode-for-headers 'c++-mode)
      cscope
      ;; latex
      )
@@ -315,6 +316,17 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  (add-hook 'c++-mode-hook
+            (lambda ()
+              ;; (push 'company-semantic company-backends)
+              (setq company-clang-arguments '("-std=c++14"))
+              (setq flycheck-clang-language-standard "c++14")
+              ;; (setq flycheck-clang-include-path '())
+              (add-to-list 'company-c-headers-path-system
+                           "/usr/include/c++/6.2.1")
+              ))
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
