@@ -40,7 +40,7 @@ values."
      shell
      ;; common-lisp
      ;; yaml
-     ansible
+     ;; ansible
      ;; php
      ;; nginx
      ;; html
