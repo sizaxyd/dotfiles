@@ -38,39 +38,37 @@ values."
      ;; ----------------------------------------------------------------
      markdown
      shell
-     ;; common-lisp
-     ;; yaml
-     ;; ansible
-     ;; php
-     ;; nginx
-     ;; html
      helm
      better-defaults
      emacs-lisp
      git
-     ;; markdown
      org
      gnus
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
      syntax-checking
      version-control
      (python :variables
              python-enable-yapf-format-on-save t
              python-test-runner 'pytest)
-     ;; django
      (auto-completion :variables
                       auto-completion-complete-with-key-sequence "jk"
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t)
      semantic
+     asm
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
      cscope
+     ;; django
+     ;; common-lisp
+     ;; spell-checking
      ;; latex
+     ;; markdown
+     ;; yaml
+     ;; ansible
+     ;; php
+     ;; nginx
+     ;; html
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
