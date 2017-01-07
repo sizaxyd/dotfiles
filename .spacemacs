@@ -58,7 +58,8 @@ values."
      (c-c++ :variables
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
-     rust
+     (rust :variables
+           rust-format-on-save t)
      cscope
      ;; django
      ;; common-lisp
