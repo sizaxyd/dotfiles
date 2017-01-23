@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls -la --color=auto'
+alias ls='ls -lah --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # for keychain autostart
