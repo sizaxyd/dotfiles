@@ -65,7 +65,7 @@ values."
      ;; pdf-tools
      ;; mineo-rtags
      ;; django
-     ;; common-lisp
+     common-lisp
      ;; spell-checking
      (latex :variables
             latex-build-command "LaTeX"
