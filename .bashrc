@@ -9,4 +9,4 @@ alias ls='ls -lah --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # for keychain autostart
-eval $(keychain --noask --nogui --eval --quiet ~/.ssh/keys --confhost ~/.ssh/config)
+eval $(keychain --agents ssh,gpg --noask --nogui --eval --quiet ~/.ssh/keys --confhost ~/.ssh/config)
