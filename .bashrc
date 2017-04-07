@@ -60,18 +60,27 @@ function proxy_off(){
     echo -e "Proxy environment variable removed."
 }
 
-function irc_on(){
-    sudo rm -r /etc/systemd/network/*
+function switch_irc(){
+    sudo rm -r /etc/systemd/network/25*
     sudo cp /home/harm/25-irc.network /etc/systemd/network/
     sudo systemctl restart systemd-networkd.service
     sudo systemctl restart systemd-resolved.service
-    echo -e "Switched to irc."
+    echo -e "Switched to irc network settings."
 }
-function irc_off(){
+
+function switch_rcnit(){
+    sudo rm -r /etc/systemd/network/20*
+    sudo cp /home/harm/20-rcnit.network /etc/systemd/network/
+    sudo systemctl restart systemd-networkd.service
+    sudo systemctl restart systemd-resolved.service
+    echo -e "Switched to rcnit network settings."
+}
+
+function switch_off(){
     sudo rm -r /etc/systemd/network/*
     sudo cp /home/harm/25-wireless.network /etc/systemd/network/
     sudo cp /home/harm/20-wired.network /etc/systemd/network/
     sudo systemctl restart systemd-networkd.service
     sudo systemctl restart systemd-resolved.service
-    echo -e "Switched to all purpose."
+    echo -e "Switched to common network settings."
 }
