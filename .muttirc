@@ -1,9 +1,9 @@
-# vim: filetype=muttrc
+# IRC mail.ru config
 source "gpg -dq $HOME/.my-pwds.gpg |"
 
-set folder      = imap://mail.solkam.ru/
-set imap_user   = sadmin
-set imap_pass   = $my_rcnit
+set folder      = imaps://imap.mail.ru/
+set imap_user   = irc_sol@mail.ru
+set imap_pass   = T1234y
 set spoolfile   = +INBOX
 set record      = +Sent
 mailboxes       = +Inbox +Sent
@@ -39,11 +39,13 @@ set imap_keepalive = 300
 # How often to check for new mail (time in seconds).
 set mail_check = 120
 
-set from = sadmin@solkam.ru
+set from = $imap_user
 set use_from = yes
 
-set smtp_url=smtp://$imap_user:$imap_pass@mail.solkam.ru
-#set ssl_force_tls = yes
+set smtp_url = smtp://irc_sol@smtp.mail.ru:587/
+set smtp_pass = $imap_pass
+
+# set ssl_force_tls = yes
 
 # side bar
 set sidebar_visible = yes
