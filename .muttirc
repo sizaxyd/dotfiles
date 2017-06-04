@@ -3,7 +3,7 @@ source "gpg -dq $HOME/.my-pwds.gpg |"
 
 set folder      = imaps://imap.mail.ru/
 set imap_user   = irc_sol@mail.ru
-set imap_pass   = T1234y
+set imap_pass   = $my_irc
 set spoolfile   = +INBOX
 set record      = +Sent
 mailboxes       = +Inbox +Sent
