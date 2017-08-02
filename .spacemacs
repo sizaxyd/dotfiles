@@ -60,7 +60,9 @@ values."
             c-c++-default-mode-for-headers 'c++-mode)
      (rust :variables
            rust-format-on-save t
-           racer-rust-src-path "/home/harm/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/")
+           racer-rust-src-path "/home/harm/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src/"
+           rust-rustfmt-bin "/home/harm/.cargo/bin/rustfmt"
+           rust-cargo-bin "/home/harm/.cargo/bin/cargo")
      cscope
      yaml
      ;; pdf-tools
