@@ -17,8 +17,8 @@ URxvt.saveLines:            200
 ! URxvt.lineSpace:            0
 
 ! Fonts
-URxvt*font: xft:SourceCodePro:size=14
-URxvt*boldFont: xft:SourceCodePro:bold:size=14
+URxvt*font: xft:SourceCodePro:size=12
+URxvt*boldFont: xft:SourceCodePro:bold:size=12
 
 ! URxvt*font: xft:Monospace:pixelsize=16
 ! URxvt*boldFont: xft:Monospace:pixelsize=16
