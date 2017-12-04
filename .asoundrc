@@ -19,3 +19,9 @@ pcm.!default
     }
 }
 
+# HDMI output
+#pcm.!default {
+#	type hw
+#	card 1
+#	device 3
+#}
