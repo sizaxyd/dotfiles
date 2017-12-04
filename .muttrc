@@ -15,8 +15,8 @@ mailboxes       = +Inbox +Sent
 set smtp_url  = smtps://$imap_user:$imap_pass@smtp.gmail.com
 set from      = sizaxyd@gmail.com
 set hostname  = gmail.com
-unset record
-set postponed = +[Gmail]/Drafts
+set record    = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
 set editor    = vim
 set fast_reply= yes
 set include   = yes
@@ -25,8 +25,10 @@ set header_cache = "~/.cache/mutt/"
 set message_cachedir = "~/.cache/mutt/"
 
 # Connection options
+# activate TLS if available on the server
+set ssl_starttls = yes
+# always use SSL when connecting to a server
 set ssl_force_tls = yes
-unset ssl_starttls
 
 # forward messages with attachments
 set mime_forward=yes
