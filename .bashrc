@@ -11,10 +11,6 @@ export HISTCONTROL=ignoreboth:erasedups
 alias ls='ls -lah --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# for keychain autostart
-# eval $(keychain --agents ssh,gpg --noask --nogui --eval --quiet ~/.ssh/keys --confhost ~/.ssh/config)
-eval "$(keychain --eval --quiet --agents ssh,gpg ~/.ssh/keys/github)"
-
 function switch_rcnit(){
     sudo rm -r /etc/systemd/network/2*
     sudo cp /home/harm/20-rcnit.network /etc/systemd/network/
@@ -30,6 +26,14 @@ function switch_cctv(){
     sudo systemctl restart systemd-networkd.service
     sudo systemctl restart systemd-resolved.service
     echo -e "Switched to cctv network settings."
+}
+
+function switch_fast(){
+    sudo rm -r /etc/systemd/network/20*
+    sudo cp /home/harm/20-fast.network /etc/systemd/network/
+    sudo systemctl restart systemd-networkd.service
+    sudo systemctl restart systemd-resolved.service
+    echo -e "Switched to fast network settings."
 }
 
 function switch_off(){
