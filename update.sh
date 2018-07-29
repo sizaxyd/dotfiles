@@ -7,23 +7,23 @@ rustup_update() {
 
 alacritty_update() {
     echo "alacritty update"
-    cd ~/alacritty/
+    cd ~/alacritty/ || exit
     git pull
 }
 
 emacs_update() {
     echo "spacemacs update"
-    cd ~/.emacs.d/
+    cd ~/.emacs.d/ || exit
     git pull
 }
 
 remacs() {
     echo "remacs"
-    cd ~/remacs/
+    cd ~/remacs/ || exit
     git pull
 }
 
-sudo pacman -Syu --noconfirm
 alacritty_update
+sudo pacman -Syu --noconfirm
 emacs_update
 rustup_update
