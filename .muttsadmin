@@ -2,7 +2,7 @@
 source "gpg -dq $HOME/.my-pwds.gpg |"
 
 set folder      = imap://mail.solkam.ru/
-set imap_user   = sadmin
+set imap_user   = sadmin@solkam.ru
 set imap_pass   = $my_rcnit
 set spoolfile   = +INBOX
 set record      = +Sent
