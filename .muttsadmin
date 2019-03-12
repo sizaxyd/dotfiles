@@ -49,7 +49,6 @@ set smtp_url=smtp://$imap_user:$imap_pass@mail.solkam.ru
 set sidebar_visible = yes
 bind index,pager B sidebar-toggle-visible
 
-set record = ""
 set editor=vim
 set fast_reply=yes
 set include=yes

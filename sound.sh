@@ -1,4 +1,5 @@
-# Connect to cctv
+#!/usr/bin/env bash
+
 while true; do
     echo "switch sound to:"
     echo "i) internal sound card"

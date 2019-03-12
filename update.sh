@@ -23,7 +23,7 @@ remacs() {
     git pull
 }
 
-alacritty_update
 sudo pacman -Syu --noconfirm
 emacs_update
-rustup_update
+#alacritty_update
+#rustup_update

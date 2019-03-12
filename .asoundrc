@@ -4,13 +4,7 @@ pcm.usb
     card U0x46d0x825
 }
 
-# HDMI output
-#pcm.!default {
-#	type hw
-#	card 1
-#  device 3
-#}
-
+# internal output
 pcm.!default
 {
     type asym
